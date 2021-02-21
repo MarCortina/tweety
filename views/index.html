@@ -8,16 +8,18 @@
   <div class="row">
     
     <div class="col-md-3">
-      <img src="file:///home/mar/Descargas/pajarito.png"><br>
-      <b>Your Name</b><br>
+      <img src="https://i.pinimg.com/originals/2b/bc/90/2bbc9079448492ff90124f0a51fc0be3.png"><br>
+      <b>MAR</b><br>
       100 followers
     </div>
 
     <div class="col-md-9" id="tweets">
       <!-- display tweets here -->
       {% for tweet in tweets %}
+      
         <h4><a href="/users/{{tweet.name}}">{{tweet.name}}</a></h4>
         <p><a href="/tweets/{{tweet.id}}">{{tweet.content}}</a></p>
+      
       {% endfor %}
     </div>
     
@@ -29,7 +31,7 @@
       <div class="col-md-12">
         <form action="/tweets" method="POST">
           <label for="name_field">Name:</label>
-          <input name="name" type="text" id="name_field" value="{{twitero}}"/>
+          <input name="name" type="text" id="name_field" value="{{userName}}" placeholder="Ingrese su nombre"/>
           <label for="text_field">Text:</label>
           <input name="text" type="text" id="text_field" style="width: 350px;" placeholder="Ingrese su tweet"/>
           <input type="submit" value="Submit" />
